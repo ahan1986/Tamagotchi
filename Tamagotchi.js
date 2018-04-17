@@ -33,3 +33,34 @@ var DigiPal = function () {
         console.log("I am a year older!  I am " + this.age +" old!" );
     };
 };
+
+//creating a new digipal object named 'dog'
+var dog = new DigiPal();
+
+//adding a property 'outside' to the 'dog' object and setting it to false
+dog.outside = false;
+
+//adding method 'bard' to the 'dog' object which will print a message to the screen
+dog.bark= function() {
+    console.log("Woof! Woof!");
+};
+
+//adding method 'letoutside' to the 'dog' object which lets the 'dog' outside when it's outside
+dog.letOutside = function() {
+    if(this.outside === false) {
+        console.log("Yay! I love the sunlight!");
+        this.outside = true;
+        this.bark();
+    } else {
+        console.log("we're .... outside....");
+    }
+}
+
+dog.letInside = function() {
+    if(this.outside === true) {
+        console.log("Awww. Do I have to go?");
+        this.outside = false;
+    } else {
+        console.log("we're already inside....");
+    }
+}
