@@ -64,3 +64,33 @@ dog.letInside = function() {
         console.log("we're already inside....");
     }
 }
+
+// creates a new "digitalpal" object with the name "cat"
+var cat = new DigitalPal();
+
+// adds the property "houseQuality" to the "cat" object
+cat.houseQuality = 100;
+
+// adds the "meow" method to the "cat" object which prints a message to the screen
+cat.meow = function() {
+  console.log("Meow! Meow!");
+};
+
+// adds the "destroyFurniture" method to the "cat" object which decreases the "cat.houseQuality" value by ten
+cat.destroyFurniture = function() {
+  if (this.houseQuality - 10 > 0) {
+    this.houseQuality -= 10;
+    this.bored = false;
+    this.sleepy = true;
+    console.log("MUAHAHAHAHA! TAKE THAT FURNITURE!");
+  }
+  else {
+    console.log("I've already destroyed it all!");
+  }
+};
+
+// adds the "buynewfurniture" method to the "cat" object which increases the "cat.housequality" value by fifty
+cat.buyNewFurniture = function() {
+  this.houseQuality += 50;
+  console.log("Are you sure that's a good idea?");
+};
